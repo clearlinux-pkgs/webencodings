@@ -4,7 +4,7 @@
 #
 Name     : webencodings
 Version  : 0.5.1
-Release  : 9
+Release  : 10
 URL      : http://pypi.debian.net/webencodings/webencodings-0.5.1.tar.gz
 Source0  : http://pypi.debian.net/webencodings/webencodings-0.5.1.tar.gz
 Summary  : Character encoding aliases for legacy web content
@@ -49,7 +49,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523561964
+export SOURCE_DATE_EPOCH=1523563932
 python3 setup.py build -b py3
 
 %install

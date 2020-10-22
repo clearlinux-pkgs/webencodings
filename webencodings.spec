@@ -4,7 +4,7 @@
 #
 Name     : webencodings
 Version  : 0.5.1
-Release  : 23
+Release  : 24
 URL      : http://pypi.debian.net/webencodings/webencodings-0.5.1.tar.gz
 Source0  : http://pypi.debian.net/webencodings/webencodings-0.5.1.tar.gz
 Summary  : Character encoding aliases for legacy web content
@@ -15,31 +15,9 @@ Requires: webencodings-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 
 %description
-python-webencodings
 ===================
-
-This is a Python implementation of the `WHATWG Encoding standard
-<http://encoding.spec.whatwg.org/>`_.
-
-* Latest documentation: http://packages.python.org/webencodings/
-* Source code and issue tracker:
-  https://github.com/gsnedders/python-webencodings
-* PyPI releases: http://pypi.python.org/pypi/webencodings
-* License: BSD
-* Python 2.6+ and 3.3+
-
-In order to be compatible with legacy web content
-when interpreting something like ``Content-Type: text/html; charset=latin1``,
-tools need to use a particular set of aliases for encoding labels
-as well as some overriding rules.
-For example, ``US-ASCII`` and ``iso-8859-1`` on the web are actually
-aliases for ``windows-1252``, and an UTF-8 or UTF-16 BOM takes precedence
-over any other encoding declaration.
-The Encoding standard defines all such details so that implementations do
-not have to reverse-engineer each other.
-
-This module has encoding labels and BOM detection,
-but the actual implementation for encoders and decoders is Python’s.
+        
+        This is a Python implementation of the `WHATWG Encoding standard
 
 %package python
 Summary: python components for the webencodings package.
@@ -69,12 +47,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582903604
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1603407563
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build

@@ -4,7 +4,7 @@
 #
 Name     : webencodings
 Version  : 0.5.1
-Release  : 33
+Release  : 34
 URL      : http://pypi.debian.net/webencodings/webencodings-0.5.1.tar.gz
 Source0  : http://pypi.debian.net/webencodings/webencodings-0.5.1.tar.gz
 Summary  : Character encoding aliases for legacy web content
